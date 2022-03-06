@@ -1,7 +1,6 @@
 <script>
     let country = "de";
     let search = "";
-
     let data;
 
     const checkInput = () => {
@@ -13,33 +12,34 @@
     }
 
     const getData = async () => {
-        let res = await fetch(`/api/${country}/${search}.json`);
+        let res = await fetch(`/api/${country}-${search}.json`);
         data = await res.json();
-        loaded = true;
+        if (!res.ok) {
+            switch (country) {
+                case "de":
+                    data.title = `No origin found with the search "${search}" in Germany.`;
+                    break;
+                case "ch":
+                    data.title = `No origin found with the search "${search}" in Swiss.`;
+                case "at":
+                    data.title = `No origin found with the search "${search}" in Austria.`;
+            }
+        }
     }
-
-    let loaded = false;
 </script>
 
 <body>
-    <form>
+    <form on:submit|preventDefault={checkInput}>
         <select name="country" id="country" bind:value={country}>
             <option value="de">de</option>
             <option value="ch">ch</option>
             <option value="at">at</option>
         </select>
         <input type="text" placeholder="search" bind:value={search}>
-        <button type="button" on:click={checkInput}>test</button>
+        <button type="submit">Search</button>
     </form>
     <div class="result">
-        <!-- {#await promise}
-            <p>Loading...</p>
-        {:then data} 
-            <p>{data.title}</p>
-        {:catch error}
-            <p>{error}</p>
-        {/await} -->
-        {#if loaded}
+        {#if data}
             <p>{data.title}</p>
         {/if}
     </div>
