@@ -1,6 +1,7 @@
 <script context="module">
     export async function load({ params }) {
         let res = await fetch(`/api/${params.country}/${params.search}.json`);
+        console.log(res);
         let data = await res.json();
         return {
             props: {
