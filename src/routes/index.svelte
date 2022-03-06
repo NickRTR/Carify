@@ -1,1 +1,1 @@
-<a href="/api/de/B.json">Working API</a>
+<a href="/de-BL" sveltekit:prefetch>Bl</a>
