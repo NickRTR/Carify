@@ -1,4 +1,4 @@
-export const de = {
+export const Germany = {
     0: {
       title: "Diplomaten",
       state: "Bundesweit"
@@ -2825,7 +2825,7 @@ export const de = {
     }
 }
 
-export const at = {
+export const Swiss = {
     A: {
       title: "Bundesorgane",
       state: "Bundesweit"
@@ -3252,7 +3252,7 @@ export const at = {
     }
 }
 
-export const ch = {
+export const Austria = {
     A: {
         title: "Bundesorgane",
         state: "Bundesweit"

@@ -1,16 +1,16 @@
-import { de, ch, at } from "$lib/origins.js";
+import { Germany, Swiss, Austria } from "$lib/origins.js";
 
 export function get({ params }) {
     let result;
     switch (params.country) {
-        case "de":
-            result = de[(params.search).toUpperCase()];
+        case "Germany":
+            result = Germany[(params.search).toUpperCase()];
             break;
-        case "ch":
-            result = ch[(params.search).toUpperCase()];
+        case "Swiss":
+            result = Swiss[(params.search).toUpperCase()];
             break;
-        case "at":
-            result = at[(params.search).toUpperCase()];
+        case "Austria":
+            result = Austria[(params.search).toUpperCase()];
             break;
         default:
             return {
