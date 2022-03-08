@@ -1,5 +1,7 @@
 import { Germany, Swiss, Austria } from "$lib/origins.js";
 
+// TODO: Add postal code
+
 export function get({ params }) {
     let result;
     switch (params.country) {

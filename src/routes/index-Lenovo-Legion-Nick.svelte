@@ -1,6 +1,6 @@
 <script>
     let country = "Germany";
-    let search = "---";
+    let search = "HCH";
     let data;
 
     const checkInput = () => {
@@ -22,61 +22,56 @@
     }
 </script>
 
-<main>
+<body>
     <form on:submit|preventDefault={checkInput}>
-        <div class="numberPlate">
-            <div class="innerPlate">
-                <span class="search"><input type="text" placeholder="search" maxlength="3" bind:value={search}></span>
-                <span class="initials"><p>AB</p></span>
-                <span class="numbers"><p>1234</p></span>
-            </div>
-        </div>
         <select name="country" id="country" bind:value={country}>
             <option value="Germany">Germany</option>
             <option value="Swiss">Swiss</option>
             <option value="Austria">Austria</option>
         </select>
+        <input type="text" placeholder="search" maxlength="3" bind:value={search}>
         <button type="submit">Search</button>
     </form>
+    <div class="numberPlate">
+        <span class="search"><p>{search}</p></span>
+        <span class="initials"><p>AB</p></span>
+        <span class="numbers"><p>1234</p></span>
+    </div>
     <div class="result">
         {#if data}
             <p>Origin: {data.title}</p>
             <p>Region: {data.state}</p>
         {/if}
     </div>
-</main>
+</body>
 
 <style>
     .numberPlate {
         background-image: url("/numberPlate.svg");
         background-size: contain;
         background-repeat: no-repeat;
+        font-family: 'FE-Font';
         height: 104px;
         width: 500px;
-        font-family: 'FE-Font';
-    }
-    
-    .innerPlate {
-        margin-left: 50px;
-        height: 104px;
+        display: flex;
+        /* justify-content: space-between; */
         align-items: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        text-align: center;
     }
     
-    .innerPlate * p {
+    .numberPlate * p {
         margin: 0;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
-    input[type=text] {
-        font-family: 'FE-Font';
-        font-size: 3rem;
-        border: none;
-        background-color: rgba(255, 255, 255, 0);
-        width: 140px;      
-        text-align: center;  
-        outline: none;
+    .search {
+        margin-left: 50px;
+    }
+
+    .initials {
+        margin: auto;
+    }
+
+    .numbers {
+        margin-left: auto;
     }
 </style>
