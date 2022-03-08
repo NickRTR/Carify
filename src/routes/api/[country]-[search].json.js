@@ -5,13 +5,13 @@ import { Germany, Swiss, Austria } from "$lib/origins.js";
 export function get({ params }) {
     let result;
     switch (params.country) {
-        case "Germany":
+        case "D":
             result = Germany[(params.search).toUpperCase()];
             break;
-        case "Swiss":
+        case "CH":
             result = Swiss[(params.search).toUpperCase()];
             break;
-        case "Austria":
+        case "A":
             result = Austria[(params.search).toUpperCase()];
             break;
         default:

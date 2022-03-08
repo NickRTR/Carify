@@ -1,13 +1,23 @@
 <script>
-    let country = "Germany";
+    let country = "D";
     let search = "---";
     let data;
 
     const checkInput = () => {
-        if (search !== "") {
-            getData();
-        } else {
+        if (search === "---" || search === "") {
             alert("Please enter something into the search input field.")
+        } else {
+            getData();
+        }
+    }
+
+    const changeCountry = () => {
+        const countries = ["D", "CH", "A"];
+        let index = countries.findIndex(i => i === country);
+        if (index === countries.length - 1) {
+            country = countries[0];
+        } else {
+            country = countries[index + 1];
         }
     }
     
@@ -25,17 +35,13 @@
 <main>
     <form on:submit|preventDefault={checkInput}>
         <div class="numberPlate">
+            <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
-                <span class="search"><input type="text" placeholder="search" maxlength="3" bind:value={search}></span>
-                <span class="initials"><p>AB</p></span>
-                <span class="numbers"><p>1234</p></span>
+                <input type="text" placeholder="search" maxlength="3" bind:value={search}>
+                <p>AB</p>
+                <p>1234</p>
             </div>
         </div>
-        <select name="country" id="country" bind:value={country}>
-            <option value="Germany">Germany</option>
-            <option value="Swiss">Swiss</option>
-            <option value="Austria">Austria</option>
-        </select>
         <button type="submit">Search</button>
     </form>
     <div class="result">
@@ -48,35 +54,56 @@
 
 <style>
     .numberPlate {
+        margin-top: 1rem;
         background-image: url("/numberPlate.svg");
         background-size: contain;
         background-repeat: no-repeat;
         height: 104px;
         width: 500px;
-        font-family: 'FE-Font';
+        display: flex;
+    }
+    
+    .country {
+        cursor: pointer;
+        width: 50px;
+        font-size: 30px;
+        padding-top: 60px;
+        margin: 0;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     
     .innerPlate {
-        margin-left: 50px;
+        font-family: 'FE-Font';
         height: 104px;
         align-items: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        text-align: center;
     }
     
-    .innerPlate * p {
+    .numberPlate div p {
         margin: 0;
-        font-size: 3rem;
+        font-size: 40px;
     }
 
     input[type=text] {
         font-family: 'FE-Font';
-        font-size: 3rem;
+        font-size: 40px;
         border: none;
         background-color: rgba(255, 255, 255, 0);
         width: 140px;      
-        text-align: center;  
         outline: none;
+        text-align: center;
+    }
+
+    button {
+        margin-top: .5rem;
+        border-radius: 1rem;
+        border: none;
+        padding: .5rem 1rem;
+        background-color: red;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 </style>
