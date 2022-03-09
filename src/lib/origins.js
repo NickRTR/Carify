@@ -2827,428 +2827,94 @@ export const Germany = {
 
 export const Swiss = {
     A: {
-      title: "Bundesorgane",
-      state: "Bundesweit"
+      title: "Bund"
     },
-    AM: {
-      title: "Amstetten",
-      state: "Niederösterreich"
+    AG: {
+      title: "Aargau"
     },
-    B: {
-      title: "Bregenz",
-      state: "Vorarlberg"
+    AI: {
+      title: "Appenzell Innerrhoden"
     },
-    BD: {
-      title: "Bundesbusdienst",
-      state: "Bundesweit"
+    AR: {
+      title: "Appenzell Ausserrhoden"
     },
-    BH: {
-      title: "Bundesheer",
-      state: "Bundesweit"
+    BE: {
+      title: "Bern"
     },
     BL: {
-      title: "Bruck an der Leitha",
-      state: "Niederösterreich"
+      title: "Basel-Land"
     },
-    BM: {
-      title: "Bruck-Mürzzuschlag",
-      state: "Steiermark"
-    },
-    BN: {
-      title: "Baden",
-      state: "Niederösterreich"
-    },
-    BP: {
-      title: "Bundespolizei",
-      state: "Bundesweit"
-    },
-    BR: {
-      title: "Braunau",
-      state: "Oberösterreich"
-    },
-    BZ: {
-      title: "Bludenz",
-      state: "Vorarlberg"
-    },
-    CC: {
-      title: "Konsularisches Corps",
-      state: "Bundesweit"
-    },
-    CD: {
-      title: "Diplomatisches Corps",
-      state: "Bundesweit"
-    },
-    DL: {
-      title: "Deutschlandsberg",
-      state: "Steiermark"
-    },
-    DO: {
-      title: "Dornbirn",
-      state: "Vorarlberg"
-    },
-    E: {
-      title: "Eisenstadt (Stadt)",
-      state: "Burgenland"
-    },
-    EF: {
-      title: "Eferding",
-      state: "Oberösterreich"
-    },
-    EU: {
-      title: "Eisenstadt (Umgebung)",
-      state: "Burgenland"
-    },
-    FE: {
-      title: "Feldkirchen",
-      state: "Kärnten"
-    },
-    FK: {
-      title: "Feldkirch",
-      state: "Vorarlberg"
+    BS: {
+      title: "Basel-Stadt"
     },
     FR: {
-      title: "Freistadt",
-      state: "Oberösterreich"
+      title: "Fribourg"
     },
-    FV: {
-      title: "Finanzverwaltung",
-      state: "Bundesweit"
+    GE: {
+      title: "Genf"
     },
-    G: {
-      title: "Graz",
-      state: "Steiermark"
-    },
-    GB: {
-      title: "Gröbming",
-      state: "Steiermark"
-    },
-    GD: {
-      title: "Gmünd",
-      state: "Niederösterreich"
-    },
-    GF: {
-      title: "Gänserndorf",
-      state: "Niederösterreich"
-    },
-    GM: {
-      title: "Gmunden",
-      state: "Oberösterreich"
+    GL: {
+      title: "Glarus"
     },
     GR: {
-      title: "Grieskirchen",
-      state: "Oberösterreich"
+      title: "Graubünden"
     },
-    GS: {
-      title: "Güssing",
-      state: "Burgenland"
+    JU: {
+      title: "Jura"
     },
-    GU: {
-      title: "Graz (Umgebung)",
-      state: "Steiermark"
+    LU: {
+      title: "Luzern"
     },
-    HA: {
-      title: "Hallein",
-      state: "Salzburg"
+    M: {
+      title: "Militär"
     },
-    HE: {
-      title: "Hermagor",
-      state: "Kärnten"
+    NE: {
+      title: "Neuenburg"
     },
-    HF: {
-      title: "Hartberg-Fürstenfeld",
-      state: "Steiermark"
-    },
-    HL: {
-      title: "Hollabrunn",
-      state: "Niederösterreich"
-    },
-    HO: {
-      title: "Horn",
-      state: "Niederösterreich"
-    },
-    I: {
-      title: "Innsbruck (Stadt)",
-      state: "Tirol"
-    },
-    IL: {
-      title: "Innsbruck (Land)",
-      state: "Tirol"
-    },
-    IM: {
-      title: "Imst",
-      state: "Tirol"
-    },
-    JE: {
-      title: "Jennersdorf",
-      state: "Burgenland"
-    },
-    JO: {
-      title: "St. Johann im Pongau",
-      state: "Salzburg"
-    },
-    JW: {
-      title: "Justizwache",
-      state: "Bundesweit"
-    },
-    K: {
-      title: "Klagenfurt (Stadt)",
-      state: "Kärnten"
-    },
-    KB: {
-      title: "Kitzbühel",
-      state: "Tirol"
-    },
-    KI: {
-      title: "Kirchdorf an der Krems",
-      state: "Oberösterreich"
-    },
-    KL: {
-      title: "Klagenfurt (Land)",
-      state: "Kärnten"
-    },
-    KO: {
-      title: "Korneuburg",
-      state: "Niederösterreich"
-    },
-    KR: {
-      title: "Krems",
-      state: "Niederösterreich"
-    },
-    KS: {
-      title: "Krems an der Donau (Stadt)",
-      state: "Niederösterreich"
-    },
-    KU: {
-      title: "Kufstein",
-      state: "Tirol"
-    },
-    L: {
-      title: "Linz (Stadt)",
-      state: "Oberösterreich"
-    },
-    LA: {
-      title: "Landeck",
-      state: "Tirol"
-    },
-    LB: {
-      title: "Leibnitz",
-      state: "Steiermark"
-    },
-    LE: {
-      title: "Leoben (Stadt)",
-      state: "Steiermark"
-    },
-    LF: {
-      title: "Lilienfeld",
-      state: "Niederösterreich"
-    },
-    LI: {
-      title: "Liezen",
-      state: "Steiermark"
-    },
-    LL: {
-      title: "Linz (Land)",
-      state: "Oberösterreich"
-    },
-    LN: {
-      title: "Leoben (Umgebung)",
-      state: "Steiermark"
-    },
-    LZ: {
-      title: "Lienz",
-      state: "Tirol"
-    },
-    MA: {
-      title: "Mattersburg",
-      state: "Burgenland"
-    },
-    MD: {
-      title: "Mödling",
-      state: "Niederösterreich"
-    },
-    ME: {
-      title: "Melk",
-      state: "Niederösterreich"
-    },
-    MI: {
-      title: "Mistelbach",
-      state: "Niederösterreich"
-    },
-    MT: {
-      title: "Murtal",
-      state: "Steiermark"
-    },
-    MU: {
-      title: "Murau",
-      state: "Steiermark"
-    },
-    ND: {
-      title: "Neusiedl am See",
-      state: "Burgenland"
-    },
-    NK: {
-      title: "Neunkirchen",
-      state: "Niederösterreich"
-    },
-    OP: {
-      title: "Oberpullendorf",
-      state: "Burgenland"
+    NW: {
+      title: "Nidwalden"
     },
     OW: {
-      title: "Oberwart",
-      state: "Burgenland"
+      title: "Obwalden"
     },
     P: {
-      title: "St. Pölten (Stadt)",
-      state: "Niederösterreich"
+      title: "Post"
     },
-    PE: {
-      title: "Perg",
-      state: "Oberösterreich"
+    SG: {
+      title: "St. Gallen"
     },
-    PL: {
-      title: "St. Pölten (Land)",
-      state: "Niederösterreich"
-    },
-    PT: {
-      title: "Post",
-      state: "Bundesweit"
-    },
-    RE: {
-      title: "Reutte",
-      state: "Tirol"
-    },
-    RI: {
-      title: "Ried im Innkreis",
-      state: "Oberösterreich"
-    },
-    RO: {
-      title: "Rohrbach",
-      state: "Oberösterreich"
-    },
-    S: {
-      title: "Salzburg (Stadt)",
-      state: "Salzburg"
-    },
-    SB: {
-      title: "Scheibbs",
-      state: "Niederösterreich"
-    },
-    SD: {
-      title: "Schärding",
-      state: "Oberösterreich"
-    },
-    SE: {
-      title: "Steyr (Land)",
-      state: "Oberösterreich"
-    },
-    SL: {
-      title: "Salzburg (Land)",
-      state: "Salzburg"
+    SH: {
+      title: "Schaffhausen"
     },
     SO: {
-      title: "Südoststeiermark",
-      state: "Steiermark"
-    },
-    SP: {
-      title: "Spittal an der Drau",
-      state: "Kärnten"
-    },
-    SR: {
-      title: "Steyr (Stadt)",
-      state: "Oberösterreich"
-    },
-    SV: {
-      title: "St. Veit an der Glan",
-      state: "Kärnten"
-    },
-    SW: {
-      title: "Schwechat",
-      state: "Niederösterreich"
+      title: "Solothurn"
     },
     SZ: {
-      title: "Schwaz",
-      state: "Tirol"
+      title: "Schwyz"
     },
-    TA: {
-      title: "Tamsweg",
-      state: "Salzburg"
+    TG: {
+      title: "Thurgau"
     },
-    TU: {
-      title: "Tulln",
-      state: "Niederösterreich"
+    TI: {
+      title: "Tessin"
     },
-    UU: {
-      title: "Urfahr (Umgebung)",
-      state: "Oberösterreich"
+    UR: {
+      title: "Uri"
     },
-    VB: {
-      title: "Vöcklabruck",
-      state: "Oberösterreich"
+    VD: {
+      title: "Waadt"
     },
-    VI: {
-      title: "Villach",
-      state: "Kärnten"
+    VS: {
+      title: "Wallis"
     },
-    VK: {
-      title: "Völkermarkt",
-      state: "Kärnten"
+    Z: {
+      title: "Zoll (befristet)"
     },
-    VL: {
-      title: "Villach (Land)",
-      state: "Kärnten"
+    ZG: {
+      title: "Zug"
     },
-    VO: {
-      title: "Voitsberg",
-      state: "Steiermark"
-    },
-    W: {
-      title: "Wien",
-      state: "Wien"
-    },
-    WB: {
-      title: "Wiener Neustadt (Land)",
-      state: "Niederösterreich"
-    },
-    WE: {
-      title: "Wels (Stadt)",
-      state: "Oberösterreich"
-    },
-    WL: {
-      title: "Wels (Land)",
-      state: "Oberösterreich"
-    },
-    WN: {
-      title: "Wiener Neustadt (Stadt)",
-      state: "Niederösterreich"
-    },
-    WO: {
-      title: "Wolfsberg",
-      state: "Kärnten"
-    },
-    WT: {
-      title: "Waidhofen an der Thaya",
-      state: "Niederösterreich"
-    },
-    WU: {
-      title: "Wien (Umgebung)",
-      state: "Niederösterreich"
-    },
-    WY: {
-      title: "Waidhofen an der Ybbs",
-      state: "Niederösterreich"
-    },
-    WZ: {
-      title: "Weiz",
-      state: "Steiermark"
-    },
-    ZE: {
-      title: "Zell am See",
-      state: "Salzburg"
-    },
-    ZT: {
-      title: "Zwettl",
-      state: "Niederösterreich"
+    ZH: {
+      title: "Zürich"
     }
 }
 

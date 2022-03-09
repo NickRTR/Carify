@@ -43,7 +43,9 @@
         {#if data}
             {#if data.title !== undefined}
                 <p>Origin: {data.title}</p>
-                <p>State: {data.state}</p>
+                {#if data.state}
+                    <p>State: {data.state}</p>
+                {/if}
             {:else}
                 <p>No origin found with the search "{search.toUpperCase()}".</p>
             {/if}
