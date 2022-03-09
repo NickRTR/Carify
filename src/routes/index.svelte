@@ -24,11 +24,6 @@
     const getData = async () => {
         let res = await fetch(`/api/${country}-${search}.json`);
         data = await res.json();
-        console.log(data);
-        if (!res.ok) {
-            data.title = `No origin found with the search "${search}" in ${country}.`;
-            data.state = `No region found with the search "${search}" in ${country}.`;
-        }
     }
 </script>
 
@@ -46,8 +41,12 @@
     </form>
     <div class="result">
         {#if data}
-            <p>Origin: {data.title}</p>
-            <p>State: {data.state}</p>
+            {#if data.title !== undefined}
+                <p>Origin: {data.title}</p>
+                <p>State: {data.state}</p>
+            {:else}
+                <p>No origin found with the search "{search.toUpperCase()}".</p>
+            {/if}
         {/if}
     </div>
 </main>
