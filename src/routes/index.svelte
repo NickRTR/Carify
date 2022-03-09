@@ -80,10 +80,10 @@
     .country {
         padding-left: .05rem;
         width: 64px;
-        padding-top: 5rem;
+        padding-top: 4.8rem;
         margin: 0;
         color: white;
-        font-size: 1.5rem !important;
+        font-size: 2rem !important;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         cursor: pointer;
     }
