@@ -58,38 +58,41 @@
         background-size: contain;
         background-repeat: no-repeat;
         display: flex;
+        width: 620px;
+        height: 127px;
     }
     
     .numberPlate * {
         margin: 0;
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-family: 'FE-Font';
     }
     
     .innerPlate {
-        height: 90px;
+        width: 100%;
         align-items: center;
         display: grid;
         grid-template-columns: 3fr 2fr 3fr;
-        width: 100%;
     }
 
     .country {
-        cursor: pointer;
-        width: 50px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 1.5rem !important;
-        padding-top: 3.5rem;
+        padding-left: .05rem;
+        width: 64px;
+        padding-top: 5rem;
         margin: 0;
         color: white;
+        font-size: 1.5rem !important;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        cursor: pointer;
     }
     
     input[type=text] {
         border-radius: .5rem;
         border: 2px solid gray;
         background-color: rgba(255, 255, 255, 0);
-        width: 140px;     
-        height: 70px; 
+        width: 3ch;     
+        padding: 0 10px;
+        height: 60%; 
         outline: none;
         text-align: center;
         margin: auto;
@@ -110,31 +113,57 @@
         font-weight: bold;
     }
 
-    @media only screen and (max-width: 600px) {
+    /* height: (127px * ...) */
+    /* width: (620px * ...) */
+
+    @media only screen and (max-width: 700px) {
         .numberPlate {
-            height: 90px;
-            margin-bottom: 0;
-            margin-left: 1rem;
-            margin-right: 1rem;
+            height: 101.6px;
+            width: 496px;
         }
 
-        .innerPlate {
-            height: 70px;
+        .numberPlate * {
+            font-size: 3rem;
         }
 
         .country {
-            padding-top: 2.5rem;
-            font-size: 1.3rem !important;
-            width: 38px;
+            padding-top: 3.8rem;
+            font-size: 1.5rem !important;
+            width: 50px;
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+        .numberPlate {
+            height: 63.5px;
+            width: 310px;
         }
 
-        input[type=text] {
-            border-radius: .5rem;
-            border: 2px solid gray;
-            background-color: rgba(255, 255, 255, 0);
-            width: 90%;  
-            margin: auto;  
-            height: 50px; 
+        .numberPlate * {
+            font-size: 2rem;
+        }
+
+        .country {
+            padding-top: 2.3rem;
+            font-size: 1rem !important;
+            width: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .numberPlate {
+            height: 50.8px;
+            width: 240px;
+        }
+
+        .numberPlate * {
+            font-size: 1.5rem;
+        }
+
+        .country {
+            padding-top: 1.8rem;
+            font-size: .8rem !important;
+            width: 25px;
         }
     }
 </style>
