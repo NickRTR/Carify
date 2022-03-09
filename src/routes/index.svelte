@@ -22,13 +22,14 @@
     }
     
     const getData = async () => {
+        search = search.replace(" ", "")
         let res = await fetch(`/api/${country}-${search}.json`);
         data = await res.json();
     }
 </script>
 
 <main>
-    <form on:submit|preventDefault={checkInput}>
+    <form on:submit|preventDefault={checkInput} spellcheck="false">
         <div class="numberPlate">
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
@@ -45,6 +46,9 @@
                 <p>Origin: {data.title}</p>
                 {#if data.state}
                     <p>State: {data.state}</p>
+                    {#if country === "D"}
+                        <img src={`/DeStates/${data.state}.svg`} alt={data.state}>
+                    {/if}
                 {/if}
             {:else}
                 <p>No origin found with the search "{search.toUpperCase()}".</p>
@@ -55,7 +59,7 @@
 
 <style>
     .numberPlate {
-        margin-top: 40vh;
+        margin-top: 1rem;
         background-image: url("/numberPlate.svg");
         background-size: contain;
         background-repeat: no-repeat;
@@ -113,6 +117,10 @@
         color: white;
         font-size: 1.5rem;
         font-weight: bold;
+    }
+
+    .result img {
+        width: 50vw;
     }
 
     /* height: (127px * ...) */
