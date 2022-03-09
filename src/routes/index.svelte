@@ -33,8 +33,8 @@
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
                 <input type="text" placeholder="---" maxlength="3" bind:value={search}>
-                <p>AB</p>
-                <p>1234</p>
+                <p>NR</p>
+                <p>2222</p>
             </div>
         </div>
         <button type="submit">Search</button>
@@ -92,7 +92,7 @@
         border-radius: .5rem;
         border: 2px solid gray;
         background-color: rgba(255, 255, 255, 0);
-        width: 3ch;     
+        width: 3.5ch;     
         padding: 0 10px;
         height: 60%; 
         outline: none;
