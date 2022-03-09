@@ -6,6 +6,7 @@
     @font-face {
         font-family: 'FE-Font';
         src: url("/font/FE-FONT.TTF") format("truetype");
+        font-display: swap;
     }
 
     body {

@@ -1,6 +1,6 @@
 <script>
     let country = "D";
-    let search = "---";
+    let search = "";
     let data;
 
     const checkInput = () => {
@@ -37,7 +37,7 @@
         <div class="numberPlate">
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
-                <input type="text" placeholder="search" maxlength="3" bind:value={search}>
+                <input type="text" placeholder="---" maxlength="3" bind:value={search}>
                 <p>AB</p>
                 <p>1234</p>
             </div>
@@ -47,57 +47,61 @@
     <div class="result">
         {#if data}
             <p>Origin: {data.title}</p>
-            <p>Region: {data.state}</p>
+            <p>State: {data.state}</p>
         {/if}
     </div>
 </main>
 
 <style>
     .numberPlate {
-        margin-top: 1rem;
+        margin-top: 40vh;
         background-image: url("/numberPlate.svg");
         background-size: contain;
         background-repeat: no-repeat;
-        height: 104px;
-        width: 500px;
         display: flex;
     }
     
-    .country {
-        cursor: pointer;
-        width: 50px;
-        font-size: 30px;
-        padding-top: 60px;
+    .numberPlate * {
         margin: 0;
-        color: white;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2.5rem;
+        font-family: 'FE-Font';
     }
     
     .innerPlate {
-        font-family: 'FE-Font';
-        height: 104px;
+        height: 90px;
         align-items: center;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 3fr 2fr 3fr;
+        width: 100%;
+    }
+
+    .country {
+        cursor: pointer;
+        width: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.5rem !important;
+        padding-top: 3.5rem;
+        margin: 0;
+        color: white;
     }
     
-    .numberPlate div p {
-        margin: 0;
-        font-size: 40px;
-    }
-
     input[type=text] {
-        font-family: 'FE-Font';
-        font-size: 40px;
-        border: none;
+        border-radius: .5rem;
+        border: 2px solid gray;
         background-color: rgba(255, 255, 255, 0);
-        width: 140px;      
+        width: 140px;     
+        height: 70px; 
         outline: none;
         text-align: center;
+        margin: auto;
     }
 
+    input[type=text]:focus, input[type=text]:hover {
+        border: 2px solid black;
+    } 
+
     button {
-        margin-top: .5rem;
+        margin-top: 1rem;
         border-radius: 1rem;
         border: none;
         padding: .5rem 1rem;
@@ -105,5 +109,33 @@
         color: white;
         font-size: 1.5rem;
         font-weight: bold;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .numberPlate {
+            height: 90px;
+            margin-bottom: 0;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .innerPlate {
+            height: 70px;
+        }
+
+        .country {
+            padding-top: 2.5rem;
+            font-size: 1.3rem !important;
+            width: 38px;
+        }
+
+        input[type=text] {
+            border-radius: .5rem;
+            border: 2px solid gray;
+            background-color: rgba(255, 255, 255, 0);
+            width: 90%;  
+            margin: auto;  
+            height: 50px; 
+        }
     }
 </style>
