@@ -47,7 +47,7 @@
                 {#if data.state}
                     <p>State: {data.state}</p>
                     {#if country === "D"}
-                        <img src={`/DeStates/${data.state}.svg`} alt={data.state}>
+                        <img src={`/Germany/${data.state}.svg`} alt={data.state}>
                     {/if}
                 {/if}
             {:else}
@@ -120,7 +120,7 @@
     }
 
     .result img {
-        width: 50vw;
+        width: 20vw;
     }
 
     /* height: (127px * ...) */
