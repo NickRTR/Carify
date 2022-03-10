@@ -228,7 +228,8 @@
     }
 
     .result svg {
-        width: 20vw;
+        width: 60vw;
+        max-width: 400px;
     }
 
     .red {
