@@ -1,4 +1,6 @@
 <script>
+    import { selectTextOnFocus } from "$lib/selectText.js";
+
     let country = "D";
     let search = "";
     let data;
@@ -33,9 +35,9 @@
         <div class="numberPlate">
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
-                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search}>
-                <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA">
-                <input type="text" style="width: 4.5ch;" placeholder="1234" maxlength="4" value="1234">
+                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search} use:selectTextOnFocus>
+                <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA" use:selectTextOnFocus>
+                <input type="text" style="width: 4.5ch;" placeholder="1234" maxlength="4" value="1234" use:selectTextOnFocus>
             </div>
         </div>
         <button type="submit">Search</button>
