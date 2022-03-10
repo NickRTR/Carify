@@ -33,9 +33,9 @@
         <div class="numberPlate">
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
-                <input type="text" placeholder="---" maxlength="3" bind:value={search}>
-                <p>NR</p>
-                <p>2222</p>
+                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search}>
+                <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA">
+                <input type="text" style="width: 4.5ch;" placeholder="1234" maxlength="4" value="1234">
             </div>
         </div>
         <button type="submit">Search</button>
@@ -185,7 +185,7 @@
         width: 100%;
         align-items: center;
         display: grid;
-        grid-template-columns: 3fr 2fr 3fr;
+        grid-template-columns: 3.5fr 2fr 4.3fr;
     }
 
     .country {
@@ -203,7 +203,6 @@
         border-radius: .5rem;
         border: 2px solid gray;
         background-color: rgba(255, 255, 255, 0);
-        width: 3.5ch;     
         padding: 0 10px;
         height: 60%; 
         outline: none;
@@ -268,6 +267,10 @@
             padding-top: 2.3rem;
             font-size: 1rem !important;
             width: 30px;
+        }
+
+        input[type=text] {
+            padding: 0 5px;
         }
     }
 
