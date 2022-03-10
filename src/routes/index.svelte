@@ -5,14 +5,6 @@
     let search = "";
     let data;
 
-    const checkInput = () => {
-        if (search === "---" || search === "") {
-            alert("Please enter something into the search input field.")
-        } else {
-            getData();
-        }
-    }
-
     const changeCountry = () => {
         const countries = ["D", "CH", "A"];
         let index = countries.findIndex(i => i === country);
@@ -24,20 +16,24 @@
     }
     
     const getData = async () => {
-        search = search.replace(" ", "")
-        let res = await fetch(`/api/${country}-${search}.json`);
-        data = await res.json();
+        if (search === "---" || search === "") {
+            alert("Please enter something into the search input field.")
+        } else {
+            search = search.replace(" ", "")
+            let res = await fetch(`/api/${country}-${search}.json`);
+            data = await res.json();
+        }
     }
 </script>
 
 <main>
-    <form on:submit|preventDefault={checkInput} spellcheck="false">
+    <form on:submit|preventDefault={getData} spellcheck="false">
         <div class="numberPlate">
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
-                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search} use:selectTextOnFocus>
-                <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA" use:selectTextOnFocus>
-                <input type="text" style="width: 4.5ch;" placeholder="1234" maxlength="4" value="1234" use:selectTextOnFocus>
+                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search} use:selectTextOnFocus on:input={() => {search = search.replace(/[^a-z0-9\s!?]/g, "")}}>
+                <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA" use:selectTextOnFocus on:input={(event) => {event.target.value = event.target.value.replace(/[^a-z!?]/g, "")}}>
+                <input type="text" style="width: 4.5ch;" placeholder="1234" maxlength="4" value="1234" use:selectTextOnFocus on:input={(event) => {event.target.value = event.target.value.replace(/[^\d.-]/g, "")}}>
             </div>
         </div>
         <button type="submit">Search</button>
