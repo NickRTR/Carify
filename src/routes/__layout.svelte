@@ -5,7 +5,13 @@
 <style>
     @font-face {
         font-family: 'FE-Font';
-        src: url("/FE-FONT.TTF") format("truetype");
+        src: url("/fonts/FE-FONT.ttf") format("truetype");
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'din1451';
+        src: url("/fonts/din1451.ttf") format("truetype");
         font-display: swap;
     }
 

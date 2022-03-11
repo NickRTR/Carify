@@ -41,9 +41,15 @@
     <div class="result">
         {#if data}
             {#if data.title !== undefined}
-                <p>Origin: {data.title}</p>
+                <div class="sign">
+                    <div class="text">
+                        <p style="font-size: 1.8rem;">{data.title}</p><br>
+                        {#if data.state}
+                            <p style="font-size: 1.2rem;">{data.state}</p>
+                        {/if}
+                    </div>
+                </div>
                 {#if data.state}
-                    <p>State: {data.state}</p>
                     {#if country === "D"}
                         <svg
                             viewBox="0 0 591.504 800.504"
@@ -176,7 +182,7 @@
     .numberPlate * {
         margin: 0;
         font-size: 4rem;
-        font-family: 'FE-Font';
+        font-family: "FE-Font";
     }
     
     .innerPlate {
@@ -221,6 +227,28 @@
         color: white;
         font-size: 1.5rem;
         font-weight: bold;
+    }
+
+    .sign {
+        background-image: url("/sign.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 240px;
+        width: 360px;
+        margin: 0 auto;
+        display: grid;
+        align-items: center;
+    }
+
+    .sign .text {
+        padding: 0 1.5rem;
+    }
+
+    .sign .text p {
+        font-family: "din1451";
+        word-break: break-all;
+        margin: 0;
     }
 
     .result svg {
