@@ -43,9 +43,9 @@
             {#if data.title !== undefined}
                 <div class="sign">
                     <div class="text">
-                        <p style="font-size: 1.8rem;">{data.title}</p><br>
+                        <p class="title">{data.title}</p><br>
                         {#if data.state}
-                            <p style="font-size: 1.2rem;">{data.state}</p>
+                            <p class="state">{data.state}</p>
                         {/if}
                     </div>
                 </div>
@@ -170,6 +170,7 @@
 
 <style>
     .numberPlate {
+        margin: 0 auto;
         margin-top: 1rem;
         background-image: url("/numberPlate.svg");
         background-size: contain;
@@ -219,7 +220,7 @@
     } 
 
     button {
-        margin-top: 1rem;
+        margin: 1rem 0;
         border-radius: 1rem;
         border: none;
         padding: .5rem 1rem;
@@ -251,6 +252,14 @@
         margin: 0;
     }
 
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .state {
+        font-size: 1.2rem;
+    }
+
     .result svg {
         width: 60vw;
         max-width: 400px;
@@ -277,6 +286,23 @@
             padding-top: 3.8rem;
             font-size: 1.5rem !important;
             width: 50px;
+        }
+
+        .sign {
+            width: 300px;
+            height: 200px;
+        }
+
+        .sign .text {
+            padding: 0 1rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .state {
+            font-size: 1rem;
         }
     }
 
