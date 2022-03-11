@@ -31,9 +31,17 @@
         <div class="numberPlate">
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
-                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search} use:selectTextOnFocus on:input={() => {search = search.replace(/[^a-z0-9\s!?]/g, "")}}>
-                <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA" use:selectTextOnFocus on:input={(event) => {event.target.value = event.target.value.replace(/[^a-z!?]/g, "")}}>
-                <input type="text" style="width: 4.5ch;" placeholder="1234" maxlength="4" value="1234" use:selectTextOnFocus on:input={(event) => {event.target.value = event.target.value.replace(/[^\d.-]/g, "")}}>
+                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search} use:selectTextOnFocus on:input={() => {
+                    search = search.replace(/[^a-z0-9\s!?]/g, "")
+                    }}>
+                <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA" use:selectTextOnFocus on:input={(event) => {
+                    // @ts-ignore
+                    event.target.value = event.target.value.replace(/[^a-z!?]/g, "")
+                }}>
+                <input type="text" style="width: 4.5ch;" placeholder="1234" maxlength="4" value="1234" use:selectTextOnFocus on:input={(event) => {
+                    // @ts-ignore
+                    event.target.value = event.target.value.replace(/[^\d.-]/g, "")
+                }}>
             </div>
         </div>
         <button type="submit">Search</button>
@@ -238,6 +246,7 @@
         height: 240px;
         width: 360px;
         margin: 0 auto;
+        margin-bottom: 1rem;
         display: grid;
         align-items: center;
     }
