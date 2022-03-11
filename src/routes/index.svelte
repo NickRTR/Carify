@@ -6,7 +6,7 @@
     let data;
 
     const changeCountry = () => {
-        const countries = ["D", "CH", "A"];
+        const countries = ["D", "A"];
         let index = countries.findIndex(i => i === country);
         if (index === countries.length - 1) {
             country = countries[0];
