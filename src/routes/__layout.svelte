@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Carify</title>
+</svelte:head>
+
 <body>
     <main><slot></slot></main>
 </body>
