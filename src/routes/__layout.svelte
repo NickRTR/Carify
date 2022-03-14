@@ -6,7 +6,7 @@
     <nav>
         <a href="/">Carify</a>
     </nav>
-    <slot></slot>
+        <slot></slot>
     <footer>
         <p>©2022, Nick Reutlinger</p>
     </footer>
@@ -29,6 +29,10 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         text-align: center;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     nav {
@@ -44,11 +48,9 @@
         cursor: pointer;
         text-decoration: none;
     }
-
+    
     footer {
-        position: sticky;
-        bottom: 0;
-        padding: .5rem;
+        padding: .5rem 0;
         background-color: black;
         color: white;
     }
