@@ -26,7 +26,7 @@
     }
     
     body {
-        font-family: 'Segoe UI', Tahoma;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         text-align: center;
     }
@@ -47,9 +47,12 @@
 
     footer {
         position: fixed;
+        z-index: 1;
         width: 100%;
         bottom: 0;
         padding: .5rem;
+        background-color: black;
+        color: white;
     }
 
     footer p {
