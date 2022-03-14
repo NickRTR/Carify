@@ -3,7 +3,8 @@
 </svelte:head>
 
 <body>
-    <main><slot></slot></main>
+    <nav><h1>Carify</h1></nav>
+    <slot></slot>
 </body>
 
 <style>
@@ -19,10 +20,20 @@
         font-display: swap;
     }
 
+    nav {
+        background-color: black;
+        padding: 1rem;
+    }
+
+    nav h1 {
+        color: white;
+        margin: 0;
+        font-size: 1.8rem;
+        font-family: 'Segoe UI', Tahoma;
+    }
+
     body {
         margin: 0;
-        display: flex;
-        justify-content: center;
         text-align: center;
     }
 </style>
