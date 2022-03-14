@@ -46,9 +46,7 @@
     }
 
     footer {
-        position: fixed;
-        z-index: 1;
-        width: 100%;
+        position: sticky;
         bottom: 0;
         padding: .5rem;
         background-color: black;
