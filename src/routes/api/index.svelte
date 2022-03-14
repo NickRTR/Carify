@@ -20,6 +20,5 @@
     main {
         text-align: left;
         margin-left: 1rem;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 </style>

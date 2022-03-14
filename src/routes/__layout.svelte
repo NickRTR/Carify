@@ -4,9 +4,12 @@
 
 <body>
     <nav>
-        <a href="/"><h1>Carify</h1></a>
+        <a href="/">Carify</a>
     </nav>
     <slot></slot>
+    <footer>
+        <p>©2022, Nick Reutlinger</p>
+    </footer>
 </body>
 
 <style>
@@ -21,26 +24,35 @@
         src: url("/fonts/din1451.ttf") format("truetype");
         font-display: swap;
     }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma;
+        margin: 0;
+        text-align: center;
+    }
 
     nav {
         background-color: black;
         padding: 1rem;
     }
 
-    nav h1 {
+    nav a {
         color: white;
         margin: 0;
         font-size: 1.8rem;
-        font-family: 'Segoe UI', Tahoma;
+        font-weight: bold;
         cursor: pointer;
-    }
-
-    nav a {
         text-decoration: none;
     }
 
-    body {
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        padding: .5rem;
+    }
+
+    footer p {
         margin: 0;
-        text-align: center;
     }
 </style>
