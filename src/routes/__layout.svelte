@@ -3,7 +3,9 @@
 </svelte:head>
 
 <body>
-    <nav><h1>Carify</h1></nav>
+    <nav>
+        <a href="/"><h1>Carify</h1></a>
+    </nav>
     <slot></slot>
 </body>
 
@@ -30,6 +32,11 @@
         margin: 0;
         font-size: 1.8rem;
         font-family: 'Segoe UI', Tahoma;
+        cursor: pointer;
+    }
+
+    nav a {
+        text-decoration: none;
     }
 
     body {
