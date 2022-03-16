@@ -36,9 +36,15 @@
 </main>
 
 <style>
+    h2 {
+        text-align: center;
+    }
+
     main {
         text-align: left;
         margin-left: 1rem;
+        max-width: 650px;
+        margin: auto;
     }
 
     a {

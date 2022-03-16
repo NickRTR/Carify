@@ -51,6 +51,10 @@
         margin-bottom: 1.5rem;
     }
 
+    form {
+        margin-bottom: 3rem;
+    }
+
     .search {
         border-radius: .5rem;
         padding: 0 .5rem;
