@@ -1,7 +1,5 @@
 import { Germany, Austria } from "$lib/origins.js";
 
-// TODO: Add postal code
-
 export function get({ params }) {
     let result;
     if (params.country.toLowerCase() === "d" || params.country.toLowerCase() === "de" || params.country.toLowerCase() === "germany") {
