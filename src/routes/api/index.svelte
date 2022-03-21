@@ -42,9 +42,9 @@
 
     main {
         text-align: left;
-        margin-left: 1rem;
         max-width: 650px;
         margin: auto;
+        padding: 0 .5rem;
     }
 
     a {
