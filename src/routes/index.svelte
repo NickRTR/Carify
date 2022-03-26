@@ -362,13 +362,13 @@
 
     @media only screen and (max-width: 1100px) {
         main {
-            margin: 0 5rem;
+            margin: 1rem 5rem;
         }
     }
 
     @media only screen and (max-width: 850px) {
         main {
-            margin: 0 .5rem;
+            margin: 1rem .5rem;
         }
     }
 
