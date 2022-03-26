@@ -253,7 +253,7 @@
     main {
         background-color: rgba(255, 255, 255, .7);
         border-radius: 2rem;
-        margin: 0 20%;
+        margin: 1rem 20%;
     }
 
     .numberPlate {
