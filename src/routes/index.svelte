@@ -251,6 +251,12 @@
 </main>
 
 <style>
+    main {
+        background-color: rgba(255, 255, 255, .7);
+        border-radius: 2rem;
+        margin: 0 20%;
+    }
+
     .numberPlate {
         margin: 0 auto;
         margin-top: 1rem;
@@ -354,6 +360,18 @@
 
     /* height: (127px * ...) */
     /* width: (620px * ...) */
+
+    @media only screen and (max-width: 1100px) {
+        main {
+            margin: 0 5rem;
+        }
+    }
+
+    @media only screen and (max-width: 850px) {
+        main {
+            margin: 0 .5rem;
+        }
+    }
 
     @media only screen and (max-width: 700px) {
         .numberPlate {

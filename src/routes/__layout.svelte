@@ -46,6 +46,8 @@
     }
     
     body {
+        background-image: url("/background.jpg");
+        background-size: cover;
         margin: 0;
         text-align: center;
         display: flex;

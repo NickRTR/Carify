@@ -41,16 +41,17 @@
     h2 {
         text-align: center;
     }
-
-    main {
+    
+    main {        
+        background-color: white;
         text-align: left;
+    }
+    
+    .container {
+        padding: 0 .5rem;
         max-width: 650px;
         margin: auto;
         word-break: break-word;
-    }
-
-    .container {
-         margin: 0 .5rem;
     }
 
     a {

@@ -46,13 +46,10 @@
 </main>
 
 <style>
-    h1 {
-        margin: 0;
-        margin-bottom: 1.5rem;
-    }
-
-    form {
-        margin-bottom: 3rem;
+    main {
+        background-color: rgba(255, 255, 255, .7);
+        border-radius: 2rem;
+        margin: 0 20%;
     }
 
     .search {
@@ -71,6 +68,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
     }
 
     select {
@@ -85,7 +84,6 @@
     }
 
     button {
-        margin: .5rem 0;
         margin-left: .2rem;
         border-radius: 1rem;
         border: none;
@@ -98,7 +96,7 @@
 
     .numberPlate {
         margin: 0 auto;
-        margin-top: .5rem;
+        margin-bottom: 2rem;
         background-image: url("/numberPlate.svg");
         background-size: contain;
         background-repeat: no-repeat;
@@ -139,6 +137,18 @@
         outline: none;
         text-align: center;
         margin: auto;
+    }
+
+    @media only screen and (max-width: 1100px) {
+        main {
+            margin: 0 5rem;
+        }
+    }
+
+    @media only screen and (max-width: 850px) {
+        main {
+            margin: 0 .5rem;
+        }
     }
 
     @media only screen and (max-width: 700px) {
