@@ -33,8 +33,7 @@
         <div class="numberPlate">
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
-                <!-- svelte-ignore a11y-autofocus -->
-                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" autofocus bind:value={search} use:selectTextOnFocus on:input={() => {
+                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search} use:selectTextOnFocus on:input={() => {
                     search = search.replace(/[^A-Za-z0-9\s!?]/g, "")
                     }}>
                 <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA" use:selectTextOnFocus on:input={(event) => {

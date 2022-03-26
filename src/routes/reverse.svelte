@@ -21,8 +21,7 @@
 <main>
     <h1>Reverse Search</h1>
     <form on:submit|preventDefault={getResult}>
-        <!-- svelte-ignore a11y-autofocus -->
-        <input type="text" class="search" placeholder="Search" autofocus bind:value={search}><br>
+        <input type="text" class="search" placeholder="Search" bind:value={search}><br>
         <div class="submit">
             <select name="country" id="country" bind:value={country} on:input={() => {data = undefined}}>
                 <option value="D">Germany</option>
