@@ -38,13 +38,16 @@
 </main>
 
 <style>
-    h2 {
-        text-align: center;
-    }
-    
     main {        
         background-color: white;
+        margin: 1rem;
+        border-radius: 2rem;
+        height: 100%;
         text-align: left;
+    }
+
+    h2 {
+        text-align: center;
     }
     
     .container {
@@ -56,5 +59,11 @@
 
     a {
         color: black;
+    }
+
+    @media only screen and (max-width: 500px) {
+        main {
+            margin: .5rem;
+        }
     }
 </style>
