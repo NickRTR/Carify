@@ -275,7 +275,6 @@
     
     .innerPlate {
         width: 100%;
-        align-items: center;
         display: grid;
         grid-template-columns: 3.5fr 2fr 4.3fr;
     }
