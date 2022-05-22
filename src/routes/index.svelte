@@ -34,7 +34,7 @@
             <p class="country" on:click={changeCountry}>{country}</p>
             <div class="innerPlate">
                 <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" bind:value={search} use:selectTextOnFocus on:input={() => {
-                    search = search.replace(/[^A-Za-z0-9\s!?]/g, "")
+                    search = search.replace(/[^A-Za-z0-9\u00c4\u00e4\u00d6\u00d6\u00f6\u00dc\u00fc\s!?]/g, "")
                     }}>
                 <input type="text" style="width: 2.5ch;" placeholder="AA" maxlength="2" value="AA" use:selectTextOnFocus on:input={(event) => {
                     // @ts-ignore
