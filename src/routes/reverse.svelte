@@ -6,24 +6,33 @@
 
     const getResult = async () => {
         if (search === "---" || search === "") {
-            alert("Please enter something into the search input field.")
+            alert("Please enter something into the search input field.");
         } else {
             let res = await fetch(`/api/reverse/${country}-${search}.json`);
             if (res.ok) {
                 data = await res.json();
+                search = data.title;
+                console.log(data);
             } else {
                 errorSearch = search;
             }
         }
-    }
+    };
 </script>
 
 <main>
     <h1>Reverse Search</h1>
     <form on:submit|preventDefault={getResult}>
-        <input type="text" class="search" placeholder="Search" bind:value={search}><br>
+        <input type="text" class="search" placeholder="Search" bind:value={search} /><br />
         <div class="submit">
-            <select name="country" id="country" bind:value={country} on:input={() => {data = undefined}}>
+            <select
+                name="country"
+                id="country"
+                bind:value={country}
+                on:input={() => {
+                    data = undefined;
+                }}
+            >
                 <option value="D">Germany</option>
                 <option value="A">Austria</option>
             </select>
@@ -34,9 +43,9 @@
         <div class="numberPlate">
             <p class="country">{country}</p>
             <div class="innerPlate">
-                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" value={data.key} readonly>
-                <input type="text" style="width: 2.5ch;" maxlength="2" value="AA" readonly>
-                <input type="text" style="width: 4.5ch;" maxlength="4" value="1234" readonly>
+                <input type="text" style="width: 3.5ch;" placeholder="---" maxlength="3" value={data.key} readonly />
+                <input type="text" style="width: 2.5ch;" maxlength="2" value="AA" readonly />
+                <input type="text" style="width: 4.5ch;" maxlength="4" value="1234" readonly />
             </div>
         </div>
     {:else if errorSearch}
@@ -46,15 +55,15 @@
 
 <style>
     main {
-        background-color: rgba(255, 255, 255, .7);
+        background-color: rgba(255, 255, 255, 0.7);
         border-radius: 2rem;
         margin: 1rem 20%;
     }
 
     .search {
-        border-radius: .5rem;
-        padding: 0 .5rem;
-        height: 60%; 
+        border-radius: 0.5rem;
+        padding: 0 0.5rem;
+        height: 60%;
         width: 80%;
         max-width: 300px;
         outline: none;
@@ -67,15 +76,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         margin-bottom: 1.5rem;
     }
 
     select {
-        padding: .2rem 0;
+        padding: 0.2rem 0;
         font-size: 1.1rem;
         font-weight: bold;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
     }
 
     option {
@@ -83,10 +92,10 @@
     }
 
     button {
-        margin-left: .2rem;
+        margin-left: 0.2rem;
         border-radius: 1rem;
         border: none;
-        padding: .4rem 1rem;
+        padding: 0.4rem 1rem;
         background-color: red;
         color: white;
         font-size: 1rem;
@@ -103,13 +112,13 @@
         width: 620px;
         height: 127px;
     }
-    
+
     .numberPlate * {
         margin: 0;
         font-size: 4rem;
         font-family: "FE-Font";
     }
-    
+
     .innerPlate {
         width: 100%;
         align-items: center;
@@ -118,21 +127,21 @@
     }
 
     .country {
-        padding-left: .05rem;
+        padding-left: 0.05rem;
         width: 64px;
         padding-top: 4.8rem;
         margin: 0;
         color: white;
         font-size: 2rem !important;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     }
-    
-    .innerPlate input[type=text] {
-        border-radius: .5rem;
+
+    .innerPlate input[type="text"] {
+        border-radius: 0.5rem;
         border: 2px solid black;
         background-color: rgba(255, 255, 255, 0);
         padding: 0 10px;
-        height: 60%; 
+        height: 60%;
         outline: none;
         text-align: center;
         margin: auto;
@@ -146,7 +155,7 @@
 
     @media only screen and (max-width: 850px) {
         main {
-            margin: 1rem .5rem;
+            margin: 1rem 0.5rem;
         }
     }
 
@@ -183,7 +192,7 @@
             width: 30px;
         }
 
-        .innerPlate input[type=text] {
+        .innerPlate input[type="text"] {
             padding: 0 5px;
         }
     }
@@ -200,7 +209,7 @@
 
         .country {
             padding-top: 1.8rem;
-            font-size: .8rem !important;
+            font-size: 0.8rem !important;
             width: 25px;
         }
     }
