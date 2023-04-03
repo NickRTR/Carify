@@ -1,30 +1,38 @@
-# Carify
+# create-svelte
 
-Carify is a lexikon for number plates in Germany and Austria. You can enter the location letters and press search or enter to get the spelled location. In order to switch between the 2 countries, just press onto the country indicator at the bottom left of the number plate.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## API
+## Creating a project
 
-### API URL:
-https://carify.vercel.app/api/(country)-(search).json
+If you're seeing this, you've probably already done this step. Congrats!
 
-- country: [d,a,de,at,germany,austria] (not case sensitive)
-- search: A-Z; a-z; 1-9
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-### Example: 
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-URL: https://carify.vercel.app/api/d-bl.json
+## Developing
 
-Output: {"title":"Balingen (Zollernalbkreis)","state":"Baden-Württemberg"}
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## Reverse API
+```bash
+npm run dev
 
-### API URL:
-https://carify.vercel.app/api/reverse/(country)-(search).json
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-- country: [d,a,de,at,germany,austria] (not case sensitive)
+## Building
 
-### Example: 
+To create a production version of your app:
 
-URL: https://carify.vercel.app/api/reverse/d-Balingen (Zollernalbkreis).json
+```bash
+npm run build
+```
 
-Output: {"title":"Balingen (Zollernalbkreis)","state":"Baden-Württemberg","key":"BL"}
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
