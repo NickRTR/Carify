@@ -2,22 +2,27 @@
 	import { selectTextOnFocus } from "$lib/selectText.js";
 	import { createEventDispatcher } from "svelte";
 
+	export let editable;
 	export let country;
 	export let code;
 
 	const dispatch = createEventDispatcher();
 
 	function changeCountry() {
-		dispatch("changeCountry", {
-			text: country
-		});
+		if (editable) {
+			dispatch("changeCountry", {
+				text: country
+			});
+		}
 	}
 </script>
 
 <div class="numberPlate">
-	<p class="country" on:click={changeCountry}>{country}</p>
+	<p class="country" class:editable on:click={changeCountry}>{country}</p>
 	<div class="innerPlate">
 		<input
+			class:editable
+			disabled={!editable}
 			type="text"
 			style="width: 3.5ch;"
 			placeholder="---"
@@ -65,6 +70,7 @@
 		display: flex;
 		width: 620px;
 		height: 127px;
+		margin-bottom: 1rem;
 	}
 
 	.numberPlate * {
@@ -88,6 +94,9 @@
 		color: white;
 		font-size: 2rem !important;
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	}
+
+	.editable {
 		cursor: pointer;
 	}
 
@@ -105,6 +114,10 @@
 	input[type="text"]:focus,
 	input[type="text"]:hover {
 		border: 2px solid black;
+	}
+
+	input:disabled {
+		color: black;
 	}
 
 	@media only screen and (max-width: 700px) {

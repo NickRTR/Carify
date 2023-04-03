@@ -31,7 +31,7 @@
 
 <main>
 	<form on:submit|preventDefault={getData} spellcheck="false">
-		<NumberPlate bind:country bind:code={search} on:changeCountry={changeCountry} />
+		<NumberPlate editable bind:country bind:code={search} on:changeCountry={changeCountry} />
 		<button type="submit">Search</button>
 	</form>
 	<div class="result">
@@ -268,7 +268,7 @@
 	}
 
 	button {
-		margin-block: 1rem;
+		margin-bottom: 1rem;
 		font-size: 1.5rem;
 	}
 
