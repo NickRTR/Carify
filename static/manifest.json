@@ -469,7 +469,28 @@
 	],
 	"description": "Identify the origin of any car owner, in Germany and Austria, by its number plate.",
 	"lang": "en",
-	"categories": ["utility", "games", "productivity"],
+	"categories": [
+		"education",
+		"entertainment",
+		"games",
+		"lifestyle",
+		"navigation",
+		"productivity",
+		"travel",
+		"utilities"
+	],
 	"dir": "auto",
-	"prefer_related_applications": false
+	"prefer_related_applications": false,
+	"screenshots": [
+		{
+			"src": "screenshots/desktop.png",
+			"sizes": "1280x800",
+			"type": "image/png"
+		},
+		{
+			"src": "screenshots/mobile.png",
+			"sizes": "750x1334",
+			"type": "image/png"
+		}
+	]
 }
