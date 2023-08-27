@@ -18,6 +18,7 @@
 </script>
 
 <div class="numberPlate">
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<p class="country" class:editable on:click={changeCountry}>{country}</p>
 	<div class="innerPlate">
 		<input
