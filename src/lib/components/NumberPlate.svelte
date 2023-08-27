@@ -26,7 +26,7 @@
 			disabled={!editable}
 			type="text"
 			style="width: 3.5ch;"
-			placeholder="---"
+			placeholder="BB"
 			maxlength="3"
 			bind:value={code}
 			use:selectTextOnFocus
