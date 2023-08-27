@@ -36,7 +36,7 @@
 <style>
 	@font-face {
 		font-family: "FE-Font";
-		src: url("/fonts/FE.ttf") format("truetype");
+		src: url("/fonts/FE.otf") format("truetype");
 		font-display: swap;
 	}
 

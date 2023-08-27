@@ -75,7 +75,7 @@
 
 	.numberPlate * {
 		margin: 0;
-		font-size: 4rem;
+		font-size: 5rem;
 		font-family: "FE-Font";
 		text-transform: uppercase;
 	}
