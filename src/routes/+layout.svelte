@@ -29,7 +29,7 @@
 	</nav>
 	<slot />
 	<footer>
-		<p>©2023, Nick Reutlinger</p>
+		<p>©{new Date().getFullYear()}, Nick Reutlinger</p>
 	</footer>
 </body>
 
